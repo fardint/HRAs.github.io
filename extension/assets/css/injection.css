@@ -1,0 +1,179 @@
+:root {
+    --primary-color: #e7bd67;
+    --primary-color-2: rgba(231, 189, 103, 0.5);
+    --secondary-color: #0e0c0d;
+}
+/* Injected link styling */
+.injected-btn {
+    border: none !important;
+    position: relative !important;
+    border-radius:100% !important;
+    font-size: 100% !important;
+    cursor: pointer !important;
+}
+.injected-btn::before {
+    transition: all 0.85s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    content: '';
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50px;
+    width: 25%;
+    background: var(--primary-color);
+}
+.injected-btn:hover::before{
+    background: var(--primary-color);
+    width: 100%;
+}
+
+.injected-span {
+    color: var(--primary-color);
+    mix-blend-mode: difference;
+    line-height: 100%;
+}
+.injected-span::before {
+    content: '★';
+}
+/* Injected link styling */
+
+/* Injected modal styling */
+
+.injected-modal {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 999999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.5);
+}
+
+.injected-modal__content {
+    background-color: var(--secondary-color);
+    color: var(--primary-color) !important;
+    border-radius: 0.5rem;
+    margin: auto;
+    padding: 0.25rem 0.5rem;
+    border: 1px solid #888;
+    min-width: 35%;
+    font-family: sans-serif;
+}
+
+.injected-modal__content-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--primary-color);
+    text-transform: uppercase;
+}
+
+.injected-modal__content-title {
+    color: var(--primary-color);
+    margin: 0;
+    font-weight: lighter;
+    font-size: 1.275rem;
+}
+
+.injected-modal__content-close {
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    outline:none !important;
+    border: none;
+}
+
+.injected-modal__content-close:hover,
+.injected-modal__content-close:focus {
+    outline:none !important;
+    border: none;
+    opacity: 0.6;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.injected-modal__content-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.injected-modal__content-balance {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    position: relative;
+}
+.injected-modal__content-balance:after {
+    content: 'FTM';
+    font-size: 10rem;
+    position: absolute;
+    text-align: center;
+    z-index: 998;
+    opacity: 0.1;
+}
+
+.injected-modal__content-balance-amount {
+    color: var(--primary-color) !important;
+    font-weight: lighter !important;
+    font-size: 5rem !important;
+}
+
+.injected-modal__content-balance-percent {
+    color: var(--primary-color) !important;
+    font-size: 2rem !important;
+}
+.injected-modal__content-balance-percent::before {
+    content: '.';
+}
+
+.injected-modal__content-balance-subtitle {
+    color: var(--primary-color) !important;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.injected-modal__content-balance-text {
+    color: var(--primary-color) !important;
+    max-width: 29rem !important;
+    text-align: justify !important;
+    text-transform: uppercase !important;
+}
+
+.injected-modal__content-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 0 0;
+    border-top: 1px solid var(--primary-color);
+}
+
+.injected-modal__content-footer-button {
+    width: 100%;
+    height: 34px;
+    font-size: 1.275rem;
+    padding: 0;
+    margin: 0;
+    background-color: rgba(0,0,0,0);
+    color:var(--primary-color);
+    outline: none !important;
+    border: none;
+    text-transform: uppercase;
+    transition: background-color 250ms ease-in-out;
+}
+.injected-modal__content-footer-button:hover,
+.injected-modal__content-footer-button:focus{
+    cursor: pointer;
+    background-color: var(--primary-color-2);
+    color: var(--secondary-color);
+    transition: background-color 250ms ease-in-out;
+}
+/* Injected modal styling */

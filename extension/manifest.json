@@ -1,0 +1,41 @@
+{
+  "manifest_version": 3,
+  "name": "Fantom Premium",
+  "version": "1.0.0",
+  "description": "The new version of HRAs designed for Fantom.",
+  "author": "free mine",
+  "icons": {
+    "16": "assets/img/icon-16.png",
+    "32": "assets/img/icon-32.png",
+    "48": "assets/img/icon-48.png",
+    "128": "assets/img/icon-128.png"
+  },
+  "action":{
+    "default_popup": "index.html",
+    "default_title": "Fantom Premium",
+    "icons": {
+      "16": "assets/img/icon-16.png",
+      "32": "assets/img/icon-32.png",
+      "48": "assets/img/icon-48.png",
+      "128": "assets/img/icon-128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "js": ["assets/js/content.js", "assets/js/web3.min.js"],
+      "css": [ "assets/css/injection.css"],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "permissions": ["scripting", "activeTab", "storage"],
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Ctrl+B",
+        "mac": "Command+B"
+      }
+    }
+  }
+}
